@@ -22,9 +22,9 @@ public class Sort {
         }
         for (int i = 0;i<=l;i++){
             for (int r = 0;r<l-i-1;r++){
-                if ( s[r]>s[r+1]){
+                if ( s[r]>s[r+1]){//比较
                     int temp = s[r];
-                    s[r] = s[r+1];
+                    s[r] = s[r+1];//冒泡
                     s[r+1] = temp;
                 }
             }
@@ -45,9 +45,10 @@ public class Sort {
         }
 
         for (int i = 1;i<lenth;i++){
-            int v = s[i];
+            int v = s[i];//目标数据
             int r = i - 1;
             for (;r>=0;--r){
+                //移动
                 if (s[r]>v){
                     s[r+1] = s[r];
                 }else {
@@ -56,8 +57,6 @@ public class Sort {
             }
             s[r+1] = v;
         }
-
-
         return s;
     }
 
