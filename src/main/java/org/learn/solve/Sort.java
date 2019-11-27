@@ -11,7 +11,7 @@ public class Sort {
 
 
     /**
-     *
+     * 冒泡排序
      * @param s
      * @param l
      */
@@ -32,11 +32,42 @@ public class Sort {
         return s;
     }
 
+    /**
+     * 插入排序
+     * @param s
+     * @param lenth
+     * @return
+     */
+    public int [] insertSort(int [] s,int lenth){
+
+        if (lenth<=1){
+            return s;
+        }
+
+        for (int i = 1;i<lenth;i++){
+            int v = s[i];
+            int r = i - 1;
+            for (;r>=0;--r){
+                if (s[r]>v){
+                    s[r+1] = s[r];
+                }else {
+                    break;
+                }
+            }
+            s[r+1] = v;
+        }
+
+
+        return s;
+    }
+
+
+
+
     public final static void   main(String [] strs){
         Sort s = new Sort();
         int sorts [] = {4,5,1,2,8,0,9};
-        sorts = s.bubbleSort(sorts,sorts.length);
-        System.out.println(sorts);
+        sorts = s.insertSort(sorts,sorts.length);
     }
 
 }
