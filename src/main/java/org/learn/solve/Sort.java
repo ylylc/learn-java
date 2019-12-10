@@ -45,7 +45,7 @@ public class Sort {
         }
 
         for (int i = 1;i<lenth;i++){
-            int v = s[i];//目标数据
+            int v = s[i];
             int r = i - 1;
             for (;r>=0;--r){
                 //移动
